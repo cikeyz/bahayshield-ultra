@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "project": "D:\\OneDrive\\Documents\\University\\3rd-Year\\2nd-Sem-Agent\\MICRO\\KiCAD\\Prototype-1\\bahayshield_ultra_prototype_1.kicad_pro",
+  "board": "D:\\OneDrive\\Documents\\University\\3rd-Year\\2nd-Sem-Agent\\MICRO\\KiCAD\\Prototype-1\\bahayshield_ultra_prototype_1.kicad_pcb",
+  "schematic": "D:\\OneDrive\\Documents\\University\\3rd-Year\\2nd-Sem-Agent\\MICRO\\KiCAD\\Prototype-1\\bahayshield_ultra_prototype_1.kicad_sch",
+  "componentCount": 21,
+  "expectedConnectionCount": 49,
+  "routedConnectionCount": 49,
+  "unroutedConnections": [],
+  "netCount": 17,
+  "footprintsByLibrary": {
+    "Connector_PinHeader_2.54mm": 15,
+    "TerminalBlock": 2,
+    "Resistor_THT": 2,
+    "Capacitor_THT": 2
+  },
+  "drc": {
+    "ok": true,
+    "returncode": 0,
+    "stdout": "Found 0 violations\nFound 0 unconnected items\nSaved DRC Report to D:\\OneDrive\\Documents\\University\\3rd-Year\\2nd-Sem-Agent\\MICRO\\KiCAD\\Prototype-1\\reports\\drc-report.json\n",
+    "stderr": ""
+  },
+  "svgExport": {
+    "ok": true,
+    "returncode": 0,
+    "stdout": "\u001b[33;1mThis command has deprecated behavior as of KiCad 9.0, the default behavior of this command will change in a future release.\u001b[0m\n\u001b[33;1mThe new behavior will match --mode-multi\u001b[0m\nPlotted to 'D:\\OneDrive\\Documents\\University\\3rd-Year\\2nd-Sem-Agent\\MICRO\\KiCAD\\Prototype-1\\reports\\board-review.svg'.\nDone.\n",
+    "stderr": ""
+  },
+  "releaseStatus": "baseline, not fabrication release"
+}

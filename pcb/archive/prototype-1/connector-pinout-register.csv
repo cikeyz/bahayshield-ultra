@@ -1,0 +1,71 @@
+reference,pin,net,value,footprint
+J1A,1,+5V,MEGA_PWR_I2C,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J1A,2,GND,MEGA_PWR_I2C,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J1A,3,SDA,MEGA_PWR_I2C,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J1A,4,SCL,MEGA_PWR_I2C,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J1B,1,US_TRIG,MEGA_WATER_ACTUATOR,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J1B,2,US_ECHO,MEGA_WATER_ACTUATOR,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J1B,3,BUZZER,MEGA_WATER_ACTUATOR,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J1B,4,RELAY1,MEGA_WATER_ACTUATOR,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J1C,1,RELAY2,MEGA_ALERTS,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J1C,2,LED_GREEN,MEGA_ALERTS,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J1C,3,LED_YELLOW,MEGA_ALERTS,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J1C,4,LED_RED,MEGA_ALERTS,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J1D,1,A0_PRESSURE,MEGA_ANALOG_POWER,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J1D,2,A1_BUTTONS,MEGA_ANALOG_POWER,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J1D,3,+3V3,MEGA_ANALOG_POWER,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J1D,4,GND,MEGA_ANALOG_POWER,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J1E,1,+5V,MEGA_SPARE_SERVICE,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J1E,2,GND,MEGA_SPARE_SERVICE,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J1E,3,NC_VIN,MEGA_SPARE_SERVICE,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J1E,4,NC_RESET,MEGA_SPARE_SERVICE,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J2,1,+5V,LCD_I2C,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J2,2,GND,LCD_I2C,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J2,3,SDA,LCD_I2C,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J2,4,SCL,LCD_I2C,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J3,1,+5V,RTC_I2C,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J3,2,GND,RTC_I2C,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J3,3,SDA,RTC_I2C,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J3,4,SCL,RTC_I2C,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J4,1,+5V,KEYPAD_I2C,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J4,2,GND,KEYPAD_I2C,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J4,3,SDA,KEYPAD_I2C,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J4,4,SCL,KEYPAD_I2C,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J5,1,+3V3,BMP280_OPTION,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J5,2,GND,BMP280_OPTION,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J5,3,SDA,BMP280_OPTION,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J5,4,SCL,BMP280_OPTION,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J6,1,+5V,DIORAMA_USONIC,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J6,2,US_TRIG,DIORAMA_USONIC,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J6,3,US_ECHO,DIORAMA_USONIC,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J6,4,GND,DIORAMA_USONIC,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J7,1,+5V,BTN_LADDER_A1,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J7,2,A1_BUTTONS,BTN_LADDER_A1,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J7,3,GND,BTN_LADDER_A1,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J7,4,NC_BTN_SPARE,BTN_LADDER_A1,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J8,1,A0_PRESSURE,PRESSURE_SIM_A0,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J8,2,+5V,PRESSURE_SIM_A0,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J8,3,GND,PRESSURE_SIM_A0,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J8,4,NC_PRESSURE_SPARE,PRESSURE_SIM_A0,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J9,1,RELAY2,RELAY_IN,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J9,2,RELAY1,RELAY_IN,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J9,3,+5V,RELAY_IN,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J9,4,GND,RELAY_IN,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J10,1,LOAD_IN,LOW_VOLTAGE_DEMO_LOAD,TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm
+J10,2,LOAD_OUT,LOW_VOLTAGE_DEMO_LOAD,TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm
+J11,1,+5V,REGULATED_5V_IN,TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm
+J11,2,GND,REGULATED_5V_IN,TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm
+J12,1,BUZZER,BUZZER_OUT,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical
+J12,2,GND,BUZZER_OUT,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical
+J13,1,LED_GREEN,STATUS_LEDS,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J13,2,LED_YELLOW,STATUS_LEDS,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J13,3,LED_RED,STATUS_LEDS,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+J13,4,GND,STATUS_LEDS,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+R1,1,+5V,4.7k SDA_PULLUP,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal
+R1,2,SDA,4.7k SDA_PULLUP,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal
+R2,1,+5V,4.7k SCL_PULLUP,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal
+R2,2,SCL,4.7k SCL_PULLUP,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal
+C1,1,+5V,100n POWER_DECOUPLE,Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm
+C1,2,GND,100n POWER_DECOUPLE,Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm
+C2,1,+3V3,100n I2C_DECOUPLE,Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm
+C2,2,GND,100n I2C_DECOUPLE,Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm

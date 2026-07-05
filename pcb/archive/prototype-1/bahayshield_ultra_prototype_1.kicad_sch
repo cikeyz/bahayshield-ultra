@@ -1,0 +1,12 @@
+(kicad_sch (version 20250114) (generator "Codex-Prototype1")
+  (uuid "6ba578a8-2603-4a71-9bb8-8ba4cd82f555")
+  (paper "A4")
+  (lib_symbols)
+  (text "Prototype-1 is PCB-authoritative. See docs/design-baseline.md and connector-pinout-register.csv."
+    (at 20 30 0)
+    (effects (font (size 2 2)))
+  )
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)

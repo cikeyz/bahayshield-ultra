@@ -1,0 +1,322 @@
+
+(rules PCB BahayShield-ULTRA-RevA-Manual.dsn
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias off)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 1)
+    (layer_rule F.Cu
+      (active off)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 3.5)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 3.5)
+    )
+  )
+  (rule
+    (width 300.0)
+    (clearance 254.0)
+    (clearance 150.0 (type smd_to_turn_gap))
+    (clearance 63.6 (type smd))
+    (clearance 254.0 (type "kicad_default"))
+    (clearance 254.0 (type I2C,Default))
+    (clearance 300.0 (type Actuator5V,Default))
+    (clearance 300.0 (type Power5V,Default))
+    (clearance 254.0 (type Logic,Default))
+    (clearance 300.0 (type GND,Default))
+    (clearance 300.0 (type Load5V,Default))
+    (clearance 300.0 (type PowerInput,Default))
+  )
+  (padstack "Via[0-1]_1300:700_um"
+    (shape
+      (circle F.Cu 1300.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 1300.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-1]_1800:900_um"
+    (shape
+      (circle F.Cu 1800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 1800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-1]_1600:800_um"
+    (shape
+      (circle F.Cu 1600.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 1600.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-1]_2000:1000_um"
+    (shape
+      (circle F.Cu 2000.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 2000.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_1300:700_um" "Via[0-1]_1300:700_um" default
+  )
+  (via 
+    "Via[0-1]_1800:900_um" "Via[0-1]_1800:900_um" default
+  )
+  (via 
+    "Via[0-1]_1600:800_um" "Via[0-1]_1600:800_um" default
+  )
+  (via 
+    "Via[0-1]_2000:1000_um" "Via[0-1]_2000:1000_um" default
+  )
+  (via 
+    "Via[0-1]_1300:700_um-kicad_default" "Via[0-1]_1300:700_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_1800:900_um-kicad_default" "Via[0-1]_1800:900_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_1600:800_um-kicad_default" "Via[0-1]_1600:800_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_2000:1000_um-kicad_default" "Via[0-1]_2000:1000_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_1300:700_um-I2C,Default" "Via[0-1]_1300:700_um" I2C,Default
+  )
+  (via 
+    "Via[0-1]_1800:900_um-I2C,Default" "Via[0-1]_1800:900_um" I2C,Default
+  )
+  (via 
+    "Via[0-1]_1600:800_um-I2C,Default" "Via[0-1]_1600:800_um" I2C,Default
+  )
+  (via 
+    "Via[0-1]_2000:1000_um-I2C,Default" "Via[0-1]_2000:1000_um" I2C,Default
+  )
+  (via 
+    "Via[0-1]_1300:700_um-Actuator5V,Default" "Via[0-1]_1300:700_um" Actuator5V,Default
+  )
+  (via 
+    "Via[0-1]_1800:900_um-Actuator5V,Default" "Via[0-1]_1800:900_um" Actuator5V,Default
+  )
+  (via 
+    "Via[0-1]_1600:800_um-Actuator5V,Default" "Via[0-1]_1600:800_um" Actuator5V,Default
+  )
+  (via 
+    "Via[0-1]_2000:1000_um-Actuator5V,Default" "Via[0-1]_2000:1000_um" Actuator5V,Default
+  )
+  (via 
+    "Via[0-1]_1300:700_um-Power5V,Default" "Via[0-1]_1300:700_um" Power5V,Default
+  )
+  (via 
+    "Via[0-1]_1800:900_um-Power5V,Default" "Via[0-1]_1800:900_um" Power5V,Default
+  )
+  (via 
+    "Via[0-1]_1600:800_um-Power5V,Default" "Via[0-1]_1600:800_um" Power5V,Default
+  )
+  (via 
+    "Via[0-1]_2000:1000_um-Power5V,Default" "Via[0-1]_2000:1000_um" Power5V,Default
+  )
+  (via 
+    "Via[0-1]_1300:700_um-Logic,Default" "Via[0-1]_1300:700_um" Logic,Default
+  )
+  (via 
+    "Via[0-1]_1800:900_um-Logic,Default" "Via[0-1]_1800:900_um" Logic,Default
+  )
+  (via 
+    "Via[0-1]_1600:800_um-Logic,Default" "Via[0-1]_1600:800_um" Logic,Default
+  )
+  (via 
+    "Via[0-1]_2000:1000_um-Logic,Default" "Via[0-1]_2000:1000_um" Logic,Default
+  )
+  (via 
+    "Via[0-1]_1300:700_um-GND,Default" "Via[0-1]_1300:700_um" GND,Default
+  )
+  (via 
+    "Via[0-1]_1800:900_um-GND,Default" "Via[0-1]_1800:900_um" GND,Default
+  )
+  (via 
+    "Via[0-1]_1600:800_um-GND,Default" "Via[0-1]_1600:800_um" GND,Default
+  )
+  (via 
+    "Via[0-1]_2000:1000_um-GND,Default" "Via[0-1]_2000:1000_um" GND,Default
+  )
+  (via 
+    "Via[0-1]_1300:700_um-Load5V,Default" "Via[0-1]_1300:700_um" Load5V,Default
+  )
+  (via 
+    "Via[0-1]_1800:900_um-Load5V,Default" "Via[0-1]_1800:900_um" Load5V,Default
+  )
+  (via 
+    "Via[0-1]_1600:800_um-Load5V,Default" "Via[0-1]_1600:800_um" Load5V,Default
+  )
+  (via 
+    "Via[0-1]_2000:1000_um-Load5V,Default" "Via[0-1]_2000:1000_um" Load5V,Default
+  )
+  (via 
+    "Via[0-1]_1300:700_um-PowerInput,Default" "Via[0-1]_1300:700_um" PowerInput,Default
+  )
+  (via 
+    "Via[0-1]_1800:900_um-PowerInput,Default" "Via[0-1]_1800:900_um" PowerInput,Default
+  )
+  (via 
+    "Via[0-1]_1600:800_um-PowerInput,Default" "Via[0-1]_1600:800_um" PowerInput,Default
+  )
+  (via 
+    "Via[0-1]_2000:1000_um-PowerInput,Default" "Via[0-1]_2000:1000_um" PowerInput,Default
+  )
+  (via_rule
+    default "Via[0-1]_1300:700_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_1300:700_um-kicad_default"
+  )
+  (via_rule
+    I2C,Default "Via[0-1]_1300:700_um-I2C,Default"
+  )
+  (via_rule
+    Actuator5V,Default "Via[0-1]_1800:900_um-Actuator5V,Default"
+  )
+  (via_rule
+    Power5V,Default "Via[0-1]_1600:800_um-Power5V,Default"
+  )
+  (via_rule
+    Logic,Default "Via[0-1]_1300:700_um-Logic,Default"
+  )
+  (via_rule
+    GND,Default "Via[0-1]_1600:800_um-GND,Default"
+  )
+  (via_rule
+    Load5V,Default "Via[0-1]_2000:1000_um-Load5V,Default"
+  )
+  (via_rule
+    PowerInput,Default "Via[0-1]_1600:800_um-PowerInput,Default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 300.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    "unconnected-(J15-Pin_1-Pad1)" 3V3 "3V3_1" "unconnected-(J1-PadA2)" "unconnected-(J1-PadA3)" "unconnected-(J1-PadA4)" "unconnected-(J1-PadA5)" "unconnected-(J1-PadA6)"
+    "unconnected-(J1-PadA7)" "unconnected-(J1-PadA8)" "unconnected-(J1-PadA9)" "unconnected-(J1-PadA10)" "unconnected-(J1-PadA11)" "unconnected-(J1-PadA12)" "unconnected-(J1-PadA13)" "unconnected-(J1-PadA14)"
+    "unconnected-(J1-PadA15)" "unconnected-(J1-PadAREF)" "unconnected-(J1-PadD13)" "unconnected-(J1-PadD14)" "unconnected-(J1-PadD15)" "unconnected-(J1-PadD16)" "unconnected-(J1-PadD17)" "unconnected-(J1-PadD18)"
+    "unconnected-(J1-PadD19)" "unconnected-(J1-PadD22)" "unconnected-(J1-PadD23)" "unconnected-(J1-PadD24)" "unconnected-(J1-PadD25)" "unconnected-(J1-PadD26)" "unconnected-(J1-PadD27)" "unconnected-(J1-PadD28)"
+    "unconnected-(J1-PadD29)" "unconnected-(J1-PadD30)" "unconnected-(J1-PadD31)" "unconnected-(J1-PadD32)" "unconnected-(J1-PadD33)" "unconnected-(J1-PadD34)" "unconnected-(J1-PadD35)" "unconnected-(J1-PadD36)"
+    "unconnected-(J1-PadD37)" "unconnected-(J1-PadD38)" "unconnected-(J1-PadD39)" "unconnected-(J1-PadD40)" "unconnected-(J1-PadD41)" "unconnected-(J1-PadD42)" "unconnected-(J1-PadD43)" "unconnected-(J1-PadD44)"
+    "unconnected-(J1-PadD45)" "unconnected-(J1-PadD46)" "unconnected-(J1-PadD47)" "unconnected-(J1-PadD48)" "unconnected-(J1-PadD49)" "unconnected-(J1-PadD50)" "unconnected-(J1-PadD51)" "unconnected-(J1-PadD52)"
+    "unconnected-(J1-PadD53)" "unconnected-(J1-PadMISO)" "unconnected-(J1-PadMOSI)" "unconnected-(J1-PadRESET)" "unconnected-(J1-PadRST)" "unconnected-(J1-PadRX)" "unconnected-(J1-PadSCK)" "unconnected-(J1-PadTX)"
+    "VIN_1" VIN
+    (clearance_class "kicad_default")
+    (via_rule "kicad_default")
+    (rule
+      (width 300.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class I2C,Default
+    /SDA /SCL
+    (clearance_class I2C,Default)
+    (via_rule I2C,Default)
+    (rule
+      (width 300.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class Actuator5V,Default
+    "/+5V_ACT"
+    (clearance_class Actuator5V,Default)
+    (via_rule Actuator5V,Default)
+    (rule
+      (width 1000.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class Power5V,Default
+    "/+5V_BUCK" 5V
+    (clearance_class Power5V,Default)
+    (via_rule Power5V,Default)
+    (rule
+      (width 800.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class Logic,Default
+    "/D12_BUZZER" "/RELAY1_IN" "/LED_TRI_O" "/LED_TRI_R" "/LED_ALERT" "/LED_TRI_G1" "/LED_TRI_G2" "/LED_TRI_Y"
+    "/RELAY2_IN" "/D8_LED_Y" "/US_TRIG" "/US_ECHO" "/BTN1_SRC" "/D6_LED_G1" "/A1_BUTTONS" "/PWR_LED_A"
+    "/BTN2_SRC" "/D11_LED_ALERT" "/D9_LED_O" "/BUZZER_NEG" "/A0_PRESSURE" "/BUZZER_BASE" "/BTN3_SRC" "/D7_LED_G2"
+    "/D10_LED_R"
+    (clearance_class Logic,Default)
+    (via_rule Logic,Default)
+    (rule
+      (width 300.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class GND,Default
+    GND
+    (clearance_class GND,Default)
+    (via_rule GND,Default)
+    (rule
+      (width 800.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class Load5V,Default
+    "/LOAD_OUT" "/LOAD_IN"
+    (clearance_class Load5V,Default)
+    (via_rule Load5V,Default)
+    (rule
+      (width 1250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class PowerInput,Default
+    "/VIN_SRC" "/VIN_SW" "/VIN_PROTECTED" "/VIN_FUSED"
+    (clearance_class PowerInput,Default)
+    (via_rule PowerInput,Default)
+    (rule
+      (width 900.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

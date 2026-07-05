@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "MEGA_PRO_EMBED_CH340G___ATMEGA2560") (type "KiCad") (uri "${KIPRJMOD}/libraries/MEGA_PRO_EMBED_CH340G___ATMEGA2560.kicad_sym") (options "") (descr ""))
+)

@@ -1,0 +1,22 @@
+quantity,references,value,footprint
+1,C2,100n I2C_DECOUPLE,Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm
+1,C1,100n POWER_DECOUPLE,Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm
+1,R2,4.7k SCL_PULLUP,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal
+1,R1,4.7k SDA_PULLUP,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal
+1,J5,BMP280_OPTION,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+1,J7,BTN_LADDER_A1,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+1,J12,BUZZER_OUT,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical
+1,J6,DIORAMA_USONIC,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+1,J4,KEYPAD_I2C,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+1,J2,LCD_I2C,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+1,J10,LOW_VOLTAGE_DEMO_LOAD,TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm
+1,J1C,MEGA_ALERTS,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+1,J1D,MEGA_ANALOG_POWER,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+1,J1A,MEGA_PWR_I2C,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+1,J1E,MEGA_SPARE_SERVICE,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+1,J1B,MEGA_WATER_ACTUATOR,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+1,J8,PRESSURE_SIM_A0,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+1,J11,REGULATED_5V_IN,TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm
+1,J9,RELAY_IN,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+1,J3,RTC_I2C,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
+1,J13,STATUS_LEDS,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical
