@@ -1,0 +1,225 @@
+<mxfile host="Electron" agent="Mozilla/5.0">
+  <diagram id="bahayshield-system-block" name="Page-1">
+    <mxGraphModel dx="1717" dy="1123" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pwr" parent="1" style="swimlane;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=18;fontStyle=1;fontFamily=Times New Roman;rounded=1;arcSize=10;swimlaneLine=0;collapsible=0;" value="Power Supply" vertex="1">
+          <mxGeometry height="150" width="260" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ps" parent="pwr" style="rounded=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" value="LM2596 buck converter&#xa;5V logic and actuator&#xa;Diode OR battery backup" vertex="1">
+          <mxGeometry height="80" width="220" x="20" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sens" parent="1" style="swimlane;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=18;fontStyle=1;fontFamily=Times New Roman;rounded=1;arcSize=10;swimlaneLine=0;collapsible=0;" value="Sensor Inputs" vertex="1">
+          <mxGeometry height="350" width="260" x="20" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" parent="sens" style="rounded=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" value="HC-SR04&#xa;Water level (cm)&#xa;NewPing" vertex="1">
+          <mxGeometry height="70" width="220" x="20" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" parent="sens" style="rounded=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" value="BMP280 (I2C)&#xa;Pressure and temp" vertex="1">
+          <mxGeometry height="60" width="220" x="20" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" parent="sens" style="rounded=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" value="DS3231 (I2C)&#xa;RTC and EEPROM" vertex="1">
+          <mxGeometry height="60" width="220" x="20" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="pot" parent="sens" style="rounded=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" value="10k potentiometer&#xa;Pressure sim (A0)" vertex="1">
+          <mxGeometry height="55" width="220" x="20" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="ui" parent="1" style="swimlane;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=18;fontStyle=1;fontFamily=Times New Roman;rounded=1;arcSize=10;swimlaneLine=0;collapsible=0;" value="User Interface" vertex="1">
+          <mxGeometry height="300" width="260" x="20" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="pcf" parent="ui" style="rounded=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" value="PCF8574 (I2C 0x20)&#xa;I/O expander" vertex="1">
+          <mxGeometry height="60" width="220" x="20" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="kp" parent="ui" style="rounded=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" value="4x4 keypad&#xa;Profile, thresholds, log" vertex="1">
+          <mxGeometry height="60" width="220" x="20" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="rlad" parent="ui" style="rounded=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" value="BTN1 to BTN3 ladder (A1)&#xa;Manual cut, view, ack" vertex="1">
+          <mxGeometry height="70" width="220" x="20" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="mcu" parent="1" style="swimlane;startSize=30;fillColor=#dae8fc;strokeColor=#1E90FF;fontSize=18;fontStyle=1;fontFamily=Times New Roman;rounded=1;arcSize=10;swimlaneLine=0;collapsible=0;" value="Arduino Mega 2560 Pro Mini (ATmega2560)" vertex="1">
+          <mxGeometry height="830" width="620" x="320" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="trig" parent="mcu" style="rounded=1;fillColor=#ffffff;strokeColor=#1E90FF;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" value="Ultrasonic timing&#xa;Pulse measurement" vertex="1">
+          <mxGeometry height="60" width="250" x="30" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="i2c" parent="mcu" style="rounded=1;fillColor=#ffffff;strokeColor=#1E90FF;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" value="I2C bus manager&#xa;BMP280 + DS3231&#xa;LCD + PCF8574" vertex="1">
+          <mxGeometry height="70" width="260" x="320" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="profile" parent="mcu" style="rounded=1;fillColor=#ffffff;strokeColor=#1E90FF;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" value="Storm profiles&#xa;Habagat, Bagyo, Flash" vertex="1">
+          <mxGeometry height="70" width="190" x="90" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="trend" parent="mcu" style="rounded=1;fillColor=#ffffff;strokeColor=#1E90FF;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" value="Pressure trend&#xa;30 min slope + regression" vertex="1">
+          <mxGeometry height="70" width="260" x="330" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="tri" parent="mcu" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;fontStyle=1;fontFamily=Times New Roman;strokeWidth=2;" value="TRI calculator&#xa;Weighted fusion:&#xa;dP + water + baseline" vertex="1">
+          <mxGeometry height="90" width="280" x="180" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="sm" parent="mcu" style="rounded=1;fillColor=#ffffff;strokeColor=#1E90FF;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" value="Alert state machine&#xa;Dry, W1, W2, Critical" vertex="1">
+          <mxGeometry height="70" width="280" x="180" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="log" parent="mcu" style="rounded=1;fillColor=#ffffff;strokeColor=#1E90FF;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" value="Event logger&#xa;Circular EEPROM buffer" vertex="1">
+          <mxGeometry height="70" width="250" x="195" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="e_trig_tri" edge="1" parent="mcu" source="trig" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#1E90FF;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.428;entryY=-0.027;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Times New Roman;" target="tri" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="130" as="sourcePoint" />
+            <mxPoint x="300" y="258" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_i2c_trend" edge="1" parent="mcu" source="i2c" style="rounded=1;strokeColor=#1E90FF;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.459;entryY=-0.038;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Times New Roman;" target="trend" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_trend_tri" edge="1" parent="mcu" source="trend" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#1E90FF;endArrow=block;endFill=1;exitX=0.004;exitY=0.553;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;" target="tri" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="259" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_profile_tri" edge="1" parent="mcu" source="profile" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#1E90FF;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.392;entryY=-0.028;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Times New Roman;" target="tri" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_tri_sm" edge="1" parent="mcu" source="tri" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#1E90FF;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontFamily=Times New Roman;" target="sm" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_sm_log" edge="1" parent="mcu" source="sm" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#1E90FF;endArrow=block;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontFamily=Times New Roman;" target="log" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="decide" parent="1" style="swimlane;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=18;fontStyle=1;fontFamily=Times New Roman;rounded=1;arcSize=10;swimlaneLine=0;collapsible=0;" value="Staged Alert Logic" vertex="1">
+          <mxGeometry height="260" width="520" x="1020" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dtri" parent="decide" style="rounded=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" value="TRI threshold checks&#xa;Watch 40, Warning 65, Critical 85" vertex="1">
+          <mxGeometry height="140" width="420" x="50" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="act" parent="1" style="swimlane;startSize=30;fillColor=#f8cecc;strokeColor=#b85450;fontSize=18;fontStyle=1;fontFamily=Times New Roman;rounded=1;arcSize=10;swimlaneLine=0;collapsible=0;" value="Actuator Outputs" vertex="1">
+          <mxGeometry height="220" width="520" x="1020" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="buz" parent="act" style="rounded=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" value="Piezo buzzer" vertex="1">
+          <mxGeometry height="80" width="140" x="30" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" parent="act" style="rounded=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" value="Relay 1&#xa;Power cut" vertex="1">
+          <mxGeometry height="80" width="140" x="200" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" parent="act" style="rounded=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" value="Relay 2&#xa;Siren" vertex="1">
+          <mxGeometry height="80" width="140" x="360" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="disp" parent="1" style="swimlane;startSize=30;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=18;fontStyle=1;fontFamily=Times New Roman;rounded=1;arcSize=10;swimlaneLine=0;collapsible=0;" value="Display and Indicators" vertex="1">
+          <mxGeometry height="260" width="520" x="1020" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="lcd" parent="disp" style="rounded=1;fillColor=#ffffff;strokeColor=#9673a6;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" value="20x4 I2C LCD&#xa;TRI, profile, cm&#xa;ETA, alert" vertex="1">
+          <mxGeometry height="100" width="240" x="160" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bar" parent="disp" style="rounded=1;fillColor=#ffffff;strokeColor=#9673a6;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" value="5 LED TRI bar&#xa;Green to red" vertex="1">
+          <mxGeometry height="70" width="180" x="70" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="alert_led" parent="disp" style="rounded=1;fillColor=#ffffff;strokeColor=#9673a6;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" value="Pre storm LED" vertex="1">
+          <mxGeometry height="60" width="180" x="300" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ps_mcu" edge="1" parent="1" source="ps" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#d6b656;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=-0.001;entryY=0.015;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Times New Roman;" target="mcu" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s1_trig" edge="1" parent="1" source="s1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;endArrow=block;endFill=1;exitX=1;exitY=0.3;entryX=0;entryY=0.5;fontFamily=Times New Roman;" target="trig" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s2_i2c" edge="1" parent="1" source="s2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;" target="i2c" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="355" />
+              <mxPoint x="290" y="108" />
+              <mxPoint x="770" y="108" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_s3_i2c" edge="1" parent="1" source="s3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0.167;entryY=1.039;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Times New Roman;" target="i2c" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="430" />
+              <mxPoint x="390" y="270" />
+              <mxPoint x="683" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_pot_tri" edge="1" parent="1" source="pot" style="rounded=1;strokeColor=#666666;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.6;fontFamily=Times New Roman;" target="tri" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_kp_pcf" edge="1" parent="1" source="kp" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;endArrow=block;endFill=1;exitX=0;exitY=0.5;entryX=0;entryY=0.7;exitDx=0;exitDy=0;fontFamily=Times New Roman;" target="pcf" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="30" y="705" />
+              <mxPoint x="30" y="642" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_pcf_i2c" edge="1" parent="1" source="pcf" style="rounded=1;strokeColor=#666666;endArrow=block;endFill=1;exitX=1;exitY=0.3;edgeStyle=orthogonalEdgeStyle;entryX=0.153;entryY=-0.015;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Times New Roman;" target="i2c" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="330" y="618" />
+              <mxPoint x="330" y="130" />
+              <mxPoint x="680" y="130" />
+            </Array>
+            <mxPoint x="520" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_rlad_sm" edge="1" parent="1" source="rlad" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;endArrow=block;endFill=1;exitX=1;exitY=0.7;entryX=0;entryY=0.7;fontFamily=Times New Roman;" target="sm" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_sm_dtri" edge="1" parent="1" source="sm" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontFamily=Times New Roman;" target="dtri" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_dtri_alert_led" edge="1" parent="1" source="dtri" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;endArrow=block;endFill=1;fontSize=14;fontFamily=Times New Roman;" target="alert_led" value="Watch">
+          <mxGeometry relative="1" x="-0.1537" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1280" y="290" />
+              <mxPoint x="1520" y="290" />
+              <mxPoint x="1520" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_dtri_buz" edge="1" parent="1" source="dtri" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;endArrow=block;endFill=1;fontSize=14;fontFamily=Times New Roman;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" target="buz" value="Warning">
+          <mxGeometry relative="1" x="0.6452" y="-20" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1050" y="135" />
+              <mxPoint x="1050" y="630" />
+              <mxPoint x="1120" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_dtri_r2" edge="1" parent="1" source="dtri" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;endArrow=block;endFill=1;fontSize=14;fontFamily=Times New Roman;entryX=0.46;entryY=-0.017;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="r1" value="Critical">
+          <mxGeometry relative="1" x="0.6565" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1630" y="170" />
+              <mxPoint x="1630" y="650" />
+              <mxPoint x="1284" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_i2c_lcd" edge="1" parent="1" source="i2c" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#9673a6;endArrow=block;endFill=1;fontSize=14;fontFamily=Times New Roman;exitX=1;exitY=0.5;entryX=0;entryY=0.4;" target="lcd" value="I2C">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="990" y="185" />
+              <mxPoint x="990" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_tri_bar" edge="1" parent="1" source="tri" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#9673a6;endArrow=block;endFill=1;fontSize=14;fontFamily=Times New Roman;exitX=1;exitY=0.5;entryX=0;entryY=0.6;" target="bar" value="TRI level">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cRdMyRX_5CM4PMfnp88I-6" edge="1" parent="1" source="dtri" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#666666;endArrow=block;endFill=1;fontSize=14;fontFamily=Times New Roman;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="r2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1630" y="170" />
+              <mxPoint x="1630" y="650" />
+              <mxPoint x="1450" y="650" />
+            </Array>
+            <mxPoint x="1826" y="330" as="sourcePoint" />
+            <mxPoint x="1620" y="859" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

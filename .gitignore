@@ -1,0 +1,36 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# Secrets
+.env
+.env.*
+
+# KiCad local / generated
+*-backups/
+**/.history/
+*.lck
+*.kicad_prl
+fp-info-cache
+*-cache.lib
+*-cache.dcm
+_autosave-*
+\#auto_saved_files\#
+
+# Build / export noise
+*.zip
+gerber/
+gerbers/
+production/
+.pio/
+.arduino/
+
+# Python
+__pycache__/
+*.pyc
+.venv/

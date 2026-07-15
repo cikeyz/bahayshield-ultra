@@ -1,0 +1,138 @@
+<mxfile host="Electron" agent="Mozilla/5.0">
+  <diagram id="bahayshield-alert-flow" name="Page-1">
+    <mxGraphModel dx="1144" dy="749" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="2200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#333333;fontFamily=Helvetica;" value="BahayShield: Staged Alert Escalation Flow" vertex="1">
+          <mxGeometry height="40" width="1000" x="50" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="idle" parent="1" style="rounded=1;arcSize=40;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontStyle=1;fontFamily=Helvetica;" value="Normal operation&#xa;TRI &lt; 20" vertex="1">
+          <mxGeometry height="70" width="320" x="390" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="psample" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1;fontFamily=Helvetica;" value="Sample BMP280&#xa;Every 60 s&#xa;Append to rolling window" vertex="1">
+          <mxGeometry height="85" width="320" x="390" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="regress" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1;fontFamily=Helvetica;" value="Linear regression&#xa;Pressure window&#xa;Compute storm ETA" vertex="1">
+          <mxGeometry height="85" width="320" x="390" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="wsample" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1;fontFamily=Helvetica;" value="Sample HC-SR04&#xa;Water level" vertex="1">
+          <mxGeometry height="70" width="320" x="390" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="tri_compute" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1;fontFamily=Helvetica;" value="Compute TRI&#xa;(dP x W1 + water x W2 + baseline x W3)&#xa;Weights from active profile" vertex="1">
+          <mxGeometry height="110" width="320" x="390" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="log_entry" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1;fontFamily=Helvetica;" value="Timestamp + log&#xa;DS3231 -&gt; EEPROM" vertex="1">
+          <mxGeometry height="70" width="320" x="390" y="645" as="geometry" />
+        </mxCell>
+        <mxCell id="update" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1;fontFamily=Helvetica;" value="Update LCD&#xa;Update LED bar graph" vertex="1">
+          <mxGeometry height="70" width="320" x="390" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="chk_watch" parent="1" style="rhombus;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;fontStyle=1;fontFamily=Helvetica;" value="TRI &gt;&#xa;Watch (40)?" vertex="1">
+          <mxGeometry height="100" width="160" x="470" y="835" as="geometry" />
+        </mxCell>
+        <mxCell id="prestorm" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;fontStyle=1;fontFamily=Helvetica;" value="Pre storm alert&#xa;Alert LED ON&#xa;LCD: storm ETA ~ XX min&#xa;Yellow bar zone" vertex="1">
+          <mxGeometry height="110" width="320" x="390" y="965" as="geometry" />
+        </mxCell>
+        <mxCell id="chk_warn" parent="1" style="rhombus;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;fontStyle=1;fontFamily=Helvetica;" value="TRI &gt;&#xa;Warning (65)?" vertex="1">
+          <mxGeometry height="100" width="160" x="470" y="1105" as="geometry" />
+        </mxCell>
+        <mxCell id="warn1" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#fce5cd;strokeColor=#d79b00;fontSize=16;fontStyle=1;fontFamily=Helvetica;" value="Warning level 1&#xa;Buzzer ON&#xa;LCD: evacuate low items&#xa;Orange bar zone" vertex="1">
+          <mxGeometry height="120" width="320" x="390" y="1235" as="geometry" />
+        </mxCell>
+        <mxCell id="chk_crit" parent="1" style="rhombus;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;fontStyle=1;fontFamily=Helvetica;" value="TRI &gt;&#xa;Critical (85)?" vertex="1">
+          <mxGeometry height="100" width="160" x="470" y="1385" as="geometry" />
+        </mxCell>
+        <mxCell id="warn2" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontStyle=1;fontFamily=Helvetica;" value="Warning level 2&#xa;Red zone&#xa;Relay 1 open: power cut&#xa;Relay 2 on: siren&#xa;LCD: floor power off&#xa;Timestamp: HH:MM:SS" vertex="1">
+          <mxGeometry height="170" width="400" x="350" y="1515" as="geometry" />
+        </mxCell>
+        <mxCell id="evacuate" parent="1" style="rhombus;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;fontStyle=1;fontFamily=Helvetica;" value="TRI &gt;&#xa;Evacuate (95)?" vertex="1">
+          <mxGeometry height="100" width="160" x="470" y="1715" as="geometry" />
+        </mxCell>
+        <mxCell id="critical" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#dc143c;strokeWidth=2;fontSize=16;fontStyle=1;fontFamily=Helvetica;" value="Critical&#xa;All LEDs flash&#xa;Continuous buzzer + siren&#xa;LCD: evacuate immediately" vertex="1">
+          <mxGeometry height="120" width="320" x="390" y="1845" as="geometry" />
+        </mxCell>
+        <mxCell id="reset" parent="1" style="rounded=1;arcSize=40;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontStyle=1;fontFamily=Helvetica;" value="Manual reset after event&#xa;BTN3 + keypad confirm" vertex="1">
+          <mxGeometry height="80" width="320" x="390" y="1995" as="geometry" />
+        </mxCell>
+        <mxCell id="e_idle_psample" edge="1" parent="1" source="idle" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="psample" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_psample_regress" edge="1" parent="1" source="psample" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="regress" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_regress_wsample" edge="1" parent="1" source="regress" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="wsample" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_wsample_tri" edge="1" parent="1" source="wsample" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="tri_compute" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_tri_log" edge="1" parent="1" source="tri_compute" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="log_entry" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_log_update" edge="1" parent="1" source="log_entry" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="update" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_update_watch" edge="1" parent="1" source="update" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="chk_watch" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_watch_prestorm" edge="1" parent="1" source="chk_watch" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;endArrow=block;endFill=1;fontSize=14;fontFamily=Helvetica;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="prestorm" value="Yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_prestorm_warn" edge="1" parent="1" source="prestorm" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="chk_warn" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_warn_warn1" edge="1" parent="1" source="chk_warn" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;endArrow=block;endFill=1;fontSize=14;fontFamily=Helvetica;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="warn1" value="Yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_warn1_crit" edge="1" parent="1" source="warn1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="chk_crit" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_crit_warn2" edge="1" parent="1" source="chk_crit" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;endArrow=block;endFill=1;fontSize=14;fontFamily=Helvetica;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="warn2" value="Yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_warn2_evac" edge="1" parent="1" source="warn2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="evacuate" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_evac_critical" edge="1" parent="1" source="evacuate" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;endArrow=block;endFill=1;fontSize=14;fontFamily=Helvetica;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="critical" value="Yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_critical_reset" edge="1" parent="1" source="critical" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="reset" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_watch_no_idle" edge="1" parent="1" source="chk_watch" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;endArrow=block;endFill=1;fontSize=14;fontFamily=Helvetica;" target="idle" value="No (safe)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="885" />
+              <mxPoint x="220" y="125" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_warn_no_idle" edge="1" parent="1" source="chk_warn" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;endArrow=block;endFill=1;fontSize=14;fontFamily=Helvetica;" target="idle" value="No">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="860" y="1155" />
+              <mxPoint x="860" y="125" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_crit_no_warn1" edge="1" parent="1" source="chk_crit" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;endArrow=block;endFill=1;fontSize=14;fontFamily=Helvetica;" target="warn1" value="No">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="1435" />
+              <mxPoint x="220" y="1295" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_evac_no_warn2" edge="1" parent="1" source="evacuate" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;endArrow=block;endFill=1;fontSize=14;fontFamily=Helvetica;" target="warn2" value="No">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="860" y="1765" />
+              <mxPoint x="860" y="1600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
