@@ -65,18 +65,42 @@ The demo unit pairs a control enclosure with a house diorama and clear flood tra
 
 ## System architecture
 
-```text
-                 +------------------+
-  HC-SR04 -----> |                  | -----> TRI LEDs + alert LED
-  BME280  -----> |  Mega 2560 Pro   | -----> Active buzzer
-  A0 pot  -----> |  (ATmega2560)    | -----> Relay 1 (COM-NC, 5 V load)
-  Buttons -----> |                  | -----> 20x4 I2C LCD
-  Keypad  -----> |  TRI + FSM       | -----> AT24C32 event log
-                 +--------+---------+
-                          |
-                     DS3231 RTC
-                          |
-                     XL4015 5 V rail
+```mermaid
+flowchart LR
+  subgraph Inputs
+    US[HC-SR04]
+    BME[BME280]
+    POT[A0 pressure pot]
+    BTN[Buttons]
+    KEY[Keypad]
+  end
+
+  subgraph Controller
+    MCU[Mega 2560 Pro<br/>ATmega2560<br/>TRI + FSM]
+    RTC[DS3231 RTC]
+    PWR[XL4015 5 V rail]
+  end
+
+  subgraph Outputs
+    LED[TRI LEDs + alert]
+    BUZ[Active buzzer]
+    REL[Relay 1 COM-NC<br/>5 V load]
+    LCD[20x4 I2C LCD]
+    LOG[AT24C32 event log]
+  end
+
+  US --> MCU
+  BME --> MCU
+  POT --> MCU
+  BTN --> MCU
+  KEY --> MCU
+  RTC --> MCU
+  PWR --> MCU
+  MCU --> LED
+  MCU --> BUZ
+  MCU --> REL
+  MCU --> LCD
+  MCU --> LOG
 ```
 
 Editable diagrams: [`docs/diagrams/`](docs/diagrams/).  
