@@ -2,7 +2,7 @@
 
 ## Intent
 
-This PCB is a low-voltage interface board for the Arduino Mega 2560 Pro Mini based BahayShield ULTRA simulation unit. It breaks out Mega-side control nets to field connectors for the ultrasonic water-level sensor, I2C LCD/RTC/keypad chain, optional BMP280 module, button ladder, pressure simulator, relay inputs, buzzer, and status LEDs.
+This PCB is a low-voltage interface board for the Arduino Mega 2560 Pro based BahayShield ULTRA simulation unit. It breaks out Mega-side control nets to field connectors for the ultrasonic water-level sensor, I2C LCD/RTC/keypad chain, optional BMP280 module, button ladder, pressure simulator, relay inputs, buzzer, and status LEDs.
 
 This file describes the Prototype-1 routing baseline, not the current release design. The active implementation requires six indicator outputs and a locked BMP280 voltage policy before fabrication.
 

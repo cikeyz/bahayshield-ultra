@@ -3,7 +3,7 @@
 Do not export Gerbers until each item is signed off.
 
 - Confirm whether this Prototype-1 board is being retired, revised, or used only as a routing reference. It is not the active release PCB until all blockers below are closed.
-- Confirm Arduino Mega 2560 Pro Mini header spacing, USB clearance, reset access, and orientation.
+- Confirm Arduino Mega 2560 Pro header spacing, USB clearance, reset access, and orientation.
 - Confirm J11 regulated 5 V input connector footprint and polarity.
 - Confirm J10 demo-load connector footprint, load current, and isolation from any mains wiring.
 - Confirm relay module input pin order and active level.

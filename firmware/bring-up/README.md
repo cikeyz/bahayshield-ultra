@@ -1,6 +1,6 @@
 # Bring-up sketches
 
-Single-purpose tests used while integrating the **Mega 2560 Pro Mini** breadboard and module set. Upload one sketch at a time. Prefer the same IDE board target as production: **Arduino Mega or Mega 2560**.
+Single-purpose tests used while integrating the **Mega 2560 Pro** and modules. Upload one sketch at a time. Board target: **Arduino Mega or Mega 2560**.
 
 | Sketch | Purpose |
 |--------|---------|

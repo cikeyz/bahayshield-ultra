@@ -1,6 +1,6 @@
 # BahayShield ULTRA Prototype-1
 
-Prototype-1 is a low-voltage KiCad PCB baseline for the BahayShield ULTRA defense-room simulation unit. It is an interface and distribution board, not a mains-power controller.
+Prototype-1 is an early low-voltage KiCad PCB baseline for BahayShield ULTRA. It is an interface and distribution board, not a mains-power controller. Prefer the Rev A project under `pcb/rev-a/` for the current design.
 
 Do not treat this as the current release PCB. It passed the original DRC check, but it no longer satisfies the active implementation requirements by itself.
 

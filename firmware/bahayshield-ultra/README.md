@@ -1,8 +1,8 @@
 # Production firmware
 
-Board: **Arduino Mega 2560 Pro Mini** (ATmega2560, 5 V).
+Board: **Arduino Mega 2560 Pro** (ATmega2560, 5 V).
 
-Arduino IDE: select **Arduino Mega or Mega 2560**.
+Arduino IDE: **Arduino Mega or Mega 2560**.
 
 ## Folder
 
@@ -38,4 +38,4 @@ Baud: `115200`.
 | `e` | Write one event-log smoke record |
 | `?` | Help |
 
-First upload with the external load disconnected. Confirm startup prints, LCD, I2C, inactive relay, and 5.00 V rails before connecting the LED-strip load path.
+Upload with the external load disconnected. Confirm startup prints, LCD, I2C, inactive relay, and 5.00 V rails before connecting the LED-strip load path.
